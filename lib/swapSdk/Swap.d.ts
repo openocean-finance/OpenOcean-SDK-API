@@ -1,0 +1,31 @@
+import { ReqSwapVo } from "../api/vo/RequestVo";
+export { ReqSwapVo };
+export declare class Swap {
+    private getDataCallback;
+    private errorCallback;
+    private transactionHashCallback;
+    private receiptCallback;
+    private successCallback;
+    contract: any;
+    res: any;
+    wallet: any;
+    chain: any;
+    isNew: boolean;
+    constructor(res: any, wallet: any, chain: any, isNew?: boolean);
+    send(): this;
+    getGas(): Promise<unknown>;
+    sendONTTransaction(): Promise<void>;
+    sendSolanaTransaction(): Promise<void>;
+    getGasOld(): Promise<number>;
+    getGasNew(): Promise<number>;
+    sendEthTransactionNew(): Promise<void>;
+    sendEthTransaction(): Promise<void>;
+    getGnosisSafeTransaction(safeTxHash: string): Promise<void>;
+    sendTronTransaction(): Promise<void>;
+    sendTerraTransaction(): Promise<void>;
+    private approveOnt;
+    private sendOntTransactionSdk;
+    private getTerraFee;
+    private getTerraMsgExecuteContract;
+    on(events: string, callback: Function): this;
+}
