@@ -35,6 +35,6 @@ You can then use all the functions explored by the SDK (API and swapSdk).
 
 ## Start programing now
 
-More details in [Recommend Workflow](./select.md)
+More details in [Recommend Workflow](https://openocean.finance/api/api-sdk/guide/select.html)
 
 
